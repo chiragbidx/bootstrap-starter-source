@@ -12,42 +12,33 @@
       crossorigin="anonymous"
     >
 
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Floating Panda branding -->
     <style>
-      .panda-float {
+      /* Floating Panda branding badge */
+      .panda-branding {
         position: fixed;
-        bottom: 24px;
-        right: 24px;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
+        bottom: 16px;
+        right: 16px;
+        width: 90px;
+        height: 30px;
         background: #ffffff;
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+        border-radius: 6px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 1050;
         cursor: pointer;
-        animation: panda-flow 4s ease-in-out infinite;
-        z-index: 1050; /* above Bootstrap nav/modals */
       }
 
-      .panda-float img {
-        width: 34px;
-        height: auto;
+      .panda-branding img {
+        max-height: 18px;
+        max-width: 70px;
         object-fit: contain;
       }
 
-      @keyframes panda-flow {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
-      }
-
-      .panda-float:hover {
-        transform: scale(1.1);
-        animation-play-state: paused;
+      /* Optional subtle hover (Lovable/Bubble style) */
+      .panda-branding:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
       }
     </style>
   </head>
@@ -97,8 +88,8 @@
       </div>
     </div>
 
-    <!-- Floating Panda branding -->
-    <div class="panda-float" title="Powered by Panda">
+    <!-- Panda branding badge -->
+    <div class="panda-branding" title="Powered by Panda">
       <img
         src="https://78f1f0dd390afac459a74c052d38e107.cdn.bubble.io/cdn-cgi/image/w=192,h=67,f=auto,dpr=1,fit=contain/f1765182663966x119092956869944590/panda-logo-in-black.png"
         alt="Panda logo"
@@ -110,6 +101,5 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js"></script>
   </body>
 </html>

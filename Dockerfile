@@ -1,8 +1,9 @@
-FROM node:20
+FROM node:20-alpine
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+# apk is much faster than apt and the alpine base image is smaller
+RUN apk add --no-cache git
 
 COPY . .
 
